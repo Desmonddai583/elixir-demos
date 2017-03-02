@@ -21,6 +21,10 @@ defmodule ListServer do
     GenServer.call :list, :items
   end
 
+  def crash do
+    GenServer.cast :list, :crash
+  end
+
 
   def init(list) do
     {:ok, list}
@@ -36,6 +40,10 @@ defmodule ListServer do
 
   def handle_cast({:remove, item}, list) do
     {:noreply, List.delete(list, item)}
+  end
+
+  def handle_cast(:crash, list) do
+    1 = 2
   end
 
   def handle_call(:items, _from, list) do
