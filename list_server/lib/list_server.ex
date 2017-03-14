@@ -1,27 +1,33 @@
 defmodule ListServer do
   use GenServer
+  require Lager
 
   def start_link(list_data_pid) do
     GenServer.start_link(__MODULE__, list_data_pid, name: :list)
   end
 
   def clear do
+    Lager.info "clearing"
     GenServer.cast :list, :clear
   end
 
   def add(item) do
+    Lager.info "adding #{item}"
     GenServer.cast :list, {:add, item}
   end
 
   def remove(item) do
+    Lager.info "removing #{item}"
     GenServer.cast :list, {:remove, item}
   end
 
   def items do
+    Lager.info "returning list of items"
     GenServer.call :list, :items
   end
 
   def crash do
+    Lager.info "crashing"
     GenServer.cast :list, :crash
   end
 
@@ -52,6 +58,7 @@ defmodule ListServer do
   end
 
   def terminate(_reason, {list, list_data_pid}) do
+    Lager.warning "terminating"
     ListData.save_state list_data_pid, list
   end
 

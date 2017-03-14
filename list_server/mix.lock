@@ -1,0 +1,3 @@
+%{"exlager": {:git, "https://github.com/khia/exlager.git", "dfee7fffcbb44f9ecd79f1237bae0f170bb27d87", []},
+  "goldrush": {:git, "https://github.com/basho/goldrush.git", "8f1b715d36b650ec1e1f5612c00e28af6ab0de82", [tag: "0.1.9"]},
+  "lager": {:git, "https://github.com/basho/lager.git", "81eaef0ce98fdbf64ab95665e3bc2ec4b24c7dac", [tag: "3.2.4"]}}

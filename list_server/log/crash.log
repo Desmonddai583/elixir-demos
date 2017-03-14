@@ -1,0 +1,40 @@
+2017-03-13 10:35:01 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Logger.Supervisor'}
+     Context:    child_terminated
+     Reason:     normal
+     Offender:   [{pid,<0.184.0>},{id,'Elixir.Logger.ErrorHandler'},{mfargs,{'Elixir.Logger.Watcher',watcher,[error_logger,'Elixir.Logger.ErrorHandler',{true,false,500},link]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2017-03-13 10:36:04 =ERROR REPORT====
+** Generic server list terminating 
+** Last message in was {'$gen_cast',crash}
+** When Server state == {[book],<0.221.0>}
+** Reason for termination == 
+** {{badmatch,2},[{'Elixir.ListServer',handle_cast,2,[{file,"lib/list_server.ex"},{line,53}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,601}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,667}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+2017-03-13 10:36:04 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.ListServer:init/1
+    pid: <0.223.0>
+    registered_name: list
+    exception exit: {{{badmatch,2},[{'Elixir.ListServer',handle_cast,2,[{file,"lib/list_server.ex"},{line,53}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,601}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,667}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]},[{gen_server,terminate,7,[{file,"gen_server.erl"},{line,812}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.222.0>,<0.220.0>,<0.218.0>]
+    messages: []
+    links: [<0.222.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 324
+  neighbours:
+2017-03-13 10:36:04 =SUPERVISOR REPORT====
+     Supervisor: {<0.222.0>,'Elixir.ListSubSupervisor'}
+     Context:    child_terminated
+     Reason:     {{badmatch,2},[{'Elixir.ListServer',handle_cast,2,[{file,"lib/list_server.ex"},{line,53}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,601}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,667}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+     Offender:   [{pid,<0.223.0>},{id,'Elixir.ListServer'},{mfargs,{'Elixir.ListServer',start_link,[<0.221.0>]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2017-03-13 10:39:31 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Logger.Supervisor'}
+     Context:    child_terminated
+     Reason:     normal
+     Offender:   [{pid,<0.113.0>},{id,'Elixir.Logger.ErrorHandler'},{mfargs,{'Elixir.Logger.Watcher',watcher,[error_logger,'Elixir.Logger.ErrorHandler',{true,false,500},link]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
